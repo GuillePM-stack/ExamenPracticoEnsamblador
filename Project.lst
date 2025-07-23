@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 11:57:16
+Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 21:46:19
 1Add and Subtract, Version 2         (AddSub2.asm	     Page 1 - 1
 
 
@@ -546,13 +546,14 @@ Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 11:57:16
  000002F2  E8 00000000 E			call ReadInt
  000002F7  A3 00000000 R			mov opcion, eax
 
+						;Listado de condiciones para los programas a ejecutar
 
 						.if opcion == 1
  000002FC  83 3D 00000000 R
 	   01		   *	    cmp    opcion, 001h
  00000303  75 1C	   *	    jne    @C0029
-						Invoke ShellExecuteA,0,ADDR operacion, ADDR programa01,NULL,NULL, 2
- 00000305  6A 02	   *	    push   +000000002h
+						Invoke ShellExecuteA,0,ADDR operacion, ADDR programa01,NULL,NULL, 1
+ 00000305  6A 01	   *	    push   +000000001h
  00000307  6A 00	   *	    push   +000000000h
  00000309  6A 00	   *	    push   +000000000h
  0000030B  68 00000009 R   *	    push   OFFSET programa01
@@ -647,7 +648,7 @@ Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 11:57:16
  000003D0  E8 00000000 E   *	    call   ExitProcess
  000003D5			main ENDP
 				END main
-Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 11:57:16
+Microsoft (R) Macro Assembler Version 14.44.35211.0	    07/22/25 21:46:19
 1Add and Subtract, Version 2         (AddSub2.asm	     Symbols 2 - 1
 
 

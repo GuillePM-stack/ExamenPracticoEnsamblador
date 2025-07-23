@@ -100,7 +100,7 @@ main PROC
 		mDrawSquare 20,12,60,27
 
 		mGotoXY 18,6
-		mWriteln "Actividad Examen Práctico en Ensamblador"
+		mWriteln "Actividad Examen Practico en Ensamblador"
 
 		mGotoXY 25,14
 		mWriteln "1. NotePad "
